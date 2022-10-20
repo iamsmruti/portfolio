@@ -5,6 +5,10 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import { red } from '@mui/material/colors';
 
 import Loading from '../components/atoms/Loading';
+import Script from 'next/script';
+
+import { useRouter } from 'next/router';
+import * as gtag from "../gtag";
 
 const theme = createTheme({
   palette: {
@@ -34,14 +38,45 @@ const theme = createTheme({
 
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
-  useEffect(() =>{
-    setTimeout(() => setLoading(false), 3000);
-  })
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 1500);
+  }, [])
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
   return (
-    <ThemeProvider theme={theme}>
+    <>
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
+
+      <ThemeProvider theme={theme}>
         {!loading ? <Component {...pageProps} /> : <Loading />}
-    </ThemeProvider>
+      </ThemeProvider>
+    </>
   );
 }
 
