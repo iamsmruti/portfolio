@@ -6,9 +6,9 @@ import Heading from '../Heading'
 import { glassMorphism, active, notActive } from '../../assets/Styles'
 import { supabase } from '../../supabaseConfig'
 
-const Works = ({}) => {
+const Works = () => {
   const [value, setValue] = useState(0)
-  const [work, setWork] = useState()
+  const [works, setWork] = useState([])
 
   const getData = async () => {
     const { data, error } = await supabase
@@ -32,12 +32,12 @@ const Works = ({}) => {
       </Stack>
 
       <Stack direction={'row'} flexWrap={'wrap'} sx={{justifyContent : {xs: 'center', md: 'flex-start'}}}>
-        {work?.filter((item) => {
+        {works?.filter((item) => {
           if(value === 1) return item.category === 'web'
           else if (value === 2) return item.category === 'general'
           else return item
         }).map((work, index) => (
-          <Box sx={{ width: { xs: '280px', md: '350px' }, m: 1, p: 2 }} key={index} style={glassMorphism}>
+          <Box key={index} sx={{ width: { xs: '280px', md: '350px' }, m: 1, p: 2 }} style={glassMorphism}>
             <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
               <Typography sx={{ fontWeight: 500, fontSize: '20px' }}>{work.title}</Typography>
 

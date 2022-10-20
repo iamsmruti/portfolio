@@ -23,8 +23,8 @@ const Skills = () => {
       <Heading title={"SKILLS"} />
 
       <Grid container>
-        {skills?.map((skill) => (
-          <Grid item md={6} xs={12} sx={{p: 3, pb: 2.5 }}>
+        {skills?.map((skill, index) => (
+          <Grid key={index} item md={6} xs={12} sx={{p: 3, pb: 2.5 }}>
             <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
               <Typography sx={{ fontWeight: 300, fontSize: '14px' }}>{skill.title}</Typography>
               <Typography sx={{ fontWeight: 300, fontSize: '14px', color: 'lightblue' }}>{skill.value} %</Typography>

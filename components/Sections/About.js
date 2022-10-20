@@ -94,7 +94,7 @@ const About = () => {
 
               {about?.map((item, index) => (
                 <>
-                  <Typography sx={{ fontSize: '16px', color: 'lightgray' }}>I am currently pursuing my Bachelor's in Veer Surendra Sai University of Technology, Burla, Sambalpur, Odisha.</Typography>
+                  <Typography sx={{ fontSize: '16px', color: 'lightgray' }}>I am currently pursuing my Bachelor&apos;s in Veer Surendra Sai University of Technology, Burla, Sambalpur, Odisha.</Typography>
                   <Grid key={index} sx={{ mt: 6 }} container>
                     <Grid item md={12} xs={12}>
                       <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Major: </span>. . . {item.branch}</Typography>
