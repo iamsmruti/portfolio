@@ -56,10 +56,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Script
+        id="ga-script"
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
       <Script
+        id='ga-init'
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
