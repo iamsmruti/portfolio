@@ -29,7 +29,7 @@ const About = () => {
           <Heading title={"ABOUT"} />
         </Box>
         <Grid sx={{ display: 'flex', justifyContent: { md: 'flex-end', xs: 'center' }, pr: { md: 3, xs: 0 } }} item md={6}>
-          <img style={{ width: '80%' }} src={'https://cdn131.picsart.com/323853150299201.jpg'} />
+          <img style={{ width: '80%', filter: 'brightness(90%)' }} src={'https://cdn131.picsart.com/323853150299201.jpg'} />
         </Grid>
         <Grid item md={6}>
           <Box sx={{ mt: -4 }}>
