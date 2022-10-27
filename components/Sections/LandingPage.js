@@ -13,7 +13,7 @@ const LandingPage = () => {
                 <Typography sx={{fontSize: {md: 30, xs: 24}, fontWeight: 200}}>Web Developer</Typography>
             </Stack>
 
-            <a rel="noreferrer" target={"_blank"} href="https://firebasestorage.googleapis.com/v0/b/portfolio-208ef.appspot.com/o/Smruti_Ranjan_Badatya.pdf?alt=media&token=d4e24099-c4b1-4811-9c21-fab16f0753ec" download>
+            <a rel="noreferrer" target={"_blank"} href="https://firebasestorage.googleapis.com/v0/b/portfolio-208ef.appspot.com/o/Smruti_Ranjan_Badatya.pdf?alt=media&token=281ce311-d2db-4559-bd5e-391ed6cf484e" download>
               <Stack direction={'row'} sx={{ m: 1, p: 2, border: '1px solid #1e1e1e', width: 'fit-content', ml: 'auto', mr: 'auto', bgcolor: 'black', cursor: 'pointer'}} justifyContent={'center'} alignContent={'center'}>
                   <Typography sx={{fontSize: 16, fontWeight: 200}}>My Resume</Typography>
               </Stack>
