@@ -45,7 +45,7 @@ const Works = () => {
                 <a href={work.github} target={'_blank'} rel={'noreferrer'}>
                   <img style={{ width: '25px', marginRight: '1rem' }} src={'https://pnggrid.com/wp-content/uploads/2022/03/Github-Logo-White.png'} />
                 </a>
-                <a href={work.github} target={'_blank'} rel={'noreferrer'}>
+                <a href={work.url} target={'_blank'} rel={'noreferrer'}>
                   <img style={{ width: '23px', marginTop: '0.1rem' }} src={'https://icon-library.com/images/website-icon-png-transparent/website-icon-png-transparent-9.jpg'} />
                 </a>
               </Stack>
