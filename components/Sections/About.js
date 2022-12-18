@@ -83,6 +83,14 @@ const About = () => {
                         <a href={item.instagram} target={'_blank'} rel={'noreferrer'}>
                           <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://i.pinimg.com/originals/64/c7/c8/64c7c86fd70cb2aea77b49fd340164b3.webp'} />
                         </a>
+
+                        <a href={item.medium} target={'_blank'} rel={'noreferrer'}>
+                          <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://cdn-icons-png.flaticon.com/512/5968/5968906.png'} />
+                        </a>
+
+                        <a href={item.leetcode} target={'_blank'} rel={'noreferrer'}>
+                          <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://leetcode.com/static/images/LeetCode_logo_rvs.png'} />
+                        </a>
                       </Stack>
                     </Grid>
                   </Grid>
@@ -98,6 +106,7 @@ const About = () => {
                   <Grid key={index} sx={{ mt: 6 }} container>
                     <Grid item md={12} xs={12}>
                       <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Major: </span>. . . {item.branch}</Typography>
+                      <Typography sx={{ color: 'lightgray', mt: 1 }}><span style={{ color: 'lightblue' }}>Semester: </span>. . . 5th</Typography>
                       <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>CGPA: </span>. . . {item.cgpa}</Typography>
                     </Grid>
                   </Grid>

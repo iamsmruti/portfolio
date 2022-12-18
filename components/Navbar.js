@@ -10,6 +10,7 @@ export const activeLink = {
     borderBottom: '2px solid white',
     marginLeft: 20,
 }
+
 export const link = {
     marginLeft: 20,
 }

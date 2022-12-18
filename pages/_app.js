@@ -60,6 +60,7 @@ function MyApp({ Component, pageProps }) {
         strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
+      <Script src='https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.js'/>
       <Script
         id='ga-init'
         strategy="afterInteractive"
