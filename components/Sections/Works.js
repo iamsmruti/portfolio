@@ -22,7 +22,7 @@ const Works = () => {
   }, [])
 
   return (
-    <Box sx={{ height: {md: 'calc(100vh - 60px)', xs: 'auto'}, mt: 10 }}>
+    <Box sx={{ minHeight: 'calc(100vh - 60px)', height: 'auto',mt: 10 }}>
       <Heading title={'WORKS'} />
 
       <Stack direction={'row'} sx={{ mb: 2, ml: 1 }}>
