@@ -5,6 +5,8 @@ import Heading from '../Heading'
 
 import { glassMorphism, active, notActive } from '../../assets/Styles'
 import { supabase } from '../../supabaseConfig'
+import GitHubIcon from '@mui/icons-material/GitHub';
+
 
 const Works = () => {
   const [value, setValue] = useState(0)
@@ -43,7 +45,7 @@ const Works = () => {
 
               <Stack direction={'row'}>
                 <a href={work.github} target={'_blank'} rel={'noreferrer'}>
-                  <img style={{ width: '25px', marginRight: '1rem' }} src={'https://pnggrid.com/wp-content/uploads/2022/03/Github-Logo-White.png'} />
+                  <GitHubIcon sx={{fontSize: '26px', mr: 2.5, color: 'white'}}/>
                 </a>
                 <a href={work.url} target={'_blank'} rel={'noreferrer'}>
                   <img style={{ width: '23px', marginTop: '0.1rem' }} src={'https://icon-library.com/images/website-icon-png-transparent/website-icon-png-transparent-9.jpg'} />

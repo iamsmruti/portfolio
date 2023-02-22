@@ -4,6 +4,7 @@ import Heading from '../Heading'
 
 import { glassMorphism } from '../../assets/Styles'
 import { supabase } from '../../supabaseConfig'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Experience = () => {
   const [experience, setExperience] = useState([])
@@ -31,7 +32,7 @@ const Experience = () => {
 
               <Stack direction={'row'}>
                 <a href={experience.linkedin} target={'_blank'} rel={'noreferrer'}>
-                  <img style={{ width: '25px', marginRight: '1rem' }} src={'https://pnggrid.com/wp-content/uploads/2021/05/Linkedin-Logo-White-Circle-1024x1024.png'} />
+                  <LinkedInIcon sx={{fontSize: '30px', color: 'white'}} />
                 </a>
               </Stack>
             </Stack>

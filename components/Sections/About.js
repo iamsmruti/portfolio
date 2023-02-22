@@ -5,6 +5,8 @@ import Heading from '../Heading'
 
 import { glassMorphism, active, notActive } from '../../assets/Styles'
 import { supabase } from '../../supabaseConfig'
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const About = () => {
   const [value, setValue] = useState(0)
@@ -69,15 +71,15 @@ const About = () => {
                     <Grid item md={12} xs={12}>
                       <Stack sx={{ mt: 4 }} direction={'row'}>
                         <a href={item.github} target={'_blank'} rel={'noreferrer'}>
-                          <img style={{ width: '25px', marginRight: '1.5rem' }} src={'https://pnggrid.com/wp-content/uploads/2022/03/Github-Logo-White.png'} />
+                          <GitHubIcon sx={{fontSize: '30px', mt: -0.5, mr: 2.5, color: 'white'}}/>
                         </a>
 
                         <a href={item.twitter} target={'_blank'} rel={'noreferrer'}>
                           <img style={{ width: '25px', marginRight: '1.5rem', marginTop: '3px' }} src={'https://pngimg.com/uploads/twitter/twitter_PNG15.png'} />
                         </a>
 
-                        <a href={item.linkedin} target={'_blank'} rel={'noreferrer'}>
-                          <img style={{ width: '25px', marginRight: '1.5rem' }} src={'https://pnggrid.com/wp-content/uploads/2021/05/Linkedin-Logo-White-Circle-1024x1024.png'} />
+                        <a style={{color: 'white'}} href={item.linkedin} target={'_blank'} rel={'noreferrer'}>
+                          <LinkedInIcon sx={{fontSize: '30px', mt: -0.5, mr: 2.5, color: 'white'}}/>
                         </a>
 
                         <a href={item.instagram} target={'_blank'} rel={'noreferrer'}>
