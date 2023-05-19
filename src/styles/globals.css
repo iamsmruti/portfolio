@@ -264,3 +264,16 @@
 .embed-tool__caption, .inline-image__caption {
   display: none;
 }
+
+.codex-editor__redactor {
+  padding-bottom: -300px;
+  width: 100%;
+}
+
+.codex-editor__redactor div.style {
+  padding-bottom: 100px;
+}
+
+.codex-editor > div {
+  padding-bottom: 100px !important;
+}

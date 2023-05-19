@@ -8,10 +8,10 @@ const ResultComponent = ({data}) => {
  
   // This will run only once
   useEffect(() => {
-    if (!ejInstance.current) {
+    if (!ejInstance.current && data !== undefined) {
       initEditor();
     }
-  }, []);
+  }, [data]);
 
   const initEditor = () => {
     const editor = new EditorJS({
@@ -30,7 +30,7 @@ const ResultComponent = ({data}) => {
   
   return (
     <>
-      <div id="ResultRoot" />
+      <div id="ResultRoot" className=""/>
     </>
   )
 }

@@ -1,6 +1,8 @@
+import { API } from "@/assets/constants"
 import BlogCard from "@/components/Sections/Blog/BlogCard"
 import Footer from "@/components/Sections/Blog/Footer"
-import React, { useState } from 'react'
+import axios from "axios"
+import React, { useEffect, useState } from 'react'
 
 const Blog = () => {
   const [category, setCategory] = useState(0)
@@ -21,6 +23,16 @@ const Blog = () => {
       state: 2
     }
   ]
+
+  const [blogs, setBlogs] = useState([])
+
+  useEffect(() => {
+    axios.get(`${API}/post/all`).then((res) => {
+      setBlogs(res.data)
+      console.log(res.data)
+    })
+  }, [])
+
   return (
     <div className='min-h-[100vh]'>
       <p className="font-thin">Browse Categories</p>
@@ -32,11 +44,15 @@ const Blog = () => {
           </>
         ))}
       </div>
+
       <div className="flex flex-col">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {blogs?.filter((item) => item.published === true).filter((item) => {
+          if(category === 1) return item.category.includes('me')
+          else if(category === 2) return item.category.includes('tech')
+          else return item
+        }).map((blog, index) => (
+          <BlogCard blog={blog} key={index} />
+        ))}
       </div>
 
       <Footer />
