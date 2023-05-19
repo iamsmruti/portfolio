@@ -1,1 +1,1 @@
-export const API = 'http://localhost:4343'
+export const API = 'https://smoothie-api-production.up.railway.app'
