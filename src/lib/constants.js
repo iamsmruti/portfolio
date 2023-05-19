@@ -1,1 +1,1 @@
-export const API = 'https://smoothie-api-production.up.railway.app/'
+export const API = 'https://smoothie-api-production.up.railway.app'
