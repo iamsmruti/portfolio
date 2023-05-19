@@ -260,3 +260,7 @@
   line-height: 32px !important;
   letter-spacing: 5px;
 }
+
+.embed-tool__caption, .inline-image__caption {
+  display: none;
+}

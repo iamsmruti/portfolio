@@ -1,10 +1,19 @@
 import BlogCardSmall from "@/components/Sections/Blog/BlogCardSmall"
 import Footer from "@/components/Sections/Blog/Footer"
-import React, { useState } from 'react'
+import dynamic from "next/dynamic"
+import React, { useState, useEffect } from 'react'
 import { AiFillLike } from 'react-icons/ai'
 import { VscCommentDiscussion } from 'react-icons/vsc'
+import ResultComponent from "@/components/Sections/Blog/Result/ResultComponentNoSSR"
 
 const BlogPage = () => {
+  const [data, setData] = useState(JSON.parse(localStorage.getItem('blog')))
+
+  useEffect(() => {
+    console.log(data)
+    localStorage.setItem('blog', JSON.stringify(data))
+  }, [data])
+
   return (
     <div className="">
       <div className="grid md:grid-cols-3 grid-cols-1 min-h-[100vh] gap-10">
@@ -28,6 +37,8 @@ const BlogPage = () => {
           </div>
 
           <img className="my-5" src="https://cdn.sanity.io/images/17ofu275/production/a5b9d357f09ecf038ca6073a85193d18313f68bf-1280x720.webp" />
+
+          <ResultComponent data={data}/>
         </div>
 
         <div className="px-5">
