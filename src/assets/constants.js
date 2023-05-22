@@ -1,1 +1,1 @@
-export const API = 'https://smoothie-api.vercel.app/'
+export const API = 'https://smoothie-api.vercel.app'
