@@ -24,13 +24,12 @@ const BlogPage = () => {
       setBlog(res.data[0])
       setData(res.data[0].body[0])
       console.log(res.data[0].body)
+      Mixpanel.track("page", `${blog.title}`)
     })
 
     axios.get(`${API}/post/all`).then((res) => {
       setBlogs(res.data)
     })
-
-    Mixpanel.track("page", `${blog.title}`)
   }, [slug])
 
   const date = new Date(blog.createdAt)
