@@ -30,7 +30,7 @@ const BlogPage = () => {
       setBlogs(res.data)
     })
 
-    Mixpanel.track("page", blog.title)
+    Mixpanel.track("page", `${blog.title}`)
   }, [slug])
 
   const date = new Date(blog.createdAt)
