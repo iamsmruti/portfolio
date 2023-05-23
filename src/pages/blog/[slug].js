@@ -8,6 +8,7 @@ import ResultComponent from "@/components/Sections/Blog/Result/ResultComponentNo
 import { useRouter } from "next/router"
 import axios from "axios"
 import { API } from "@/assets/constants"
+import { Mixpanel } from "../../../mixpanel"
 
 const BlogPage = () => {
   const [blog, setBlog] = useState({})
@@ -28,6 +29,8 @@ const BlogPage = () => {
     axios.get(`${API}/post/all`).then((res) => {
       setBlogs(res.data)
     })
+
+    Mixpanel.track("page", blog.title)
   }, [slug])
 
   const date = new Date(blog.createdAt)

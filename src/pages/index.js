@@ -9,6 +9,7 @@ import Head from "next/head"
 import React from 'react'
 import { useState, useEffect } from "react"
 import { supabase } from '../../supabaseConfig'
+import { Mixpanel } from "../../mixpanel"
 
 const Home = () => {
   const [previousData, setData] = useState([])
@@ -30,6 +31,7 @@ const Home = () => {
 
   useEffect(() => {
     getData()
+    Mixpanel.track('page', 'Portfolio')
   }, [])
 
   useEffect(() => {
@@ -53,7 +55,6 @@ const Home = () => {
       <ExperienceSection />
       <SkillsSection />
       <ContactsSection />
-      <Visitors visitors={previousData[0]?.visitors} />
     </div>
   )
 }
