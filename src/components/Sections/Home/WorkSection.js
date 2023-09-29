@@ -1,25 +1,74 @@
 import Heading from '@/components/Heading'
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
-import { glassMorphism, active, notActive } from '../../../assets/Styles'
-import { supabase } from '../../../../supabaseConfig'
+import { active, notActive } from '../../../assets/Styles'
 import { BsGithub } from 'react-icons/bs'
 import { BiLinkExternal } from 'react-icons/bi'
 
 const WorkSection = () => {
   const [value, setValue] = useState(0)
-  const [works, setWork] = useState([])
-
-  const getData = async () => {
-    const { data, error } = await supabase
-      .from('works')
-      .select('*')
-    setWork(data)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
+  const works = [
+    {
+      id: "2",
+      created_at: "2022-10-20 15:02:39.595614+00",
+      title: "recode-pde",
+      description: "This CLI will erase the nightmares of using the Processing IDE to run your sketches every time after making changes.",
+      github: "https://github.com/iamsmruti/recode-pde",
+      url: "https://www.npmjs.com/package/recode-pde",
+      category: "general",
+      tech: ["NodeJS","Chokidar"]
+    },
+    {
+      id: "4",
+      created_at: "2022-11-08 11:30:16.287884+00",
+      title: "Video TV",
+      description: "A Full Stack Video Sharing Platform. Easy to upload videos and share the url with friends.",
+      github: "https://github.com/iamsmruti/video-tv",
+      url: "https://video-tv.vercel.app/",
+      category: "web",
+      tech: ["React","Material UI","Cloudinary","Express","Mongoose"]
+    },
+    {
+      id: "5",
+      created_at: "2023-01-21 05:26:18.74987+00",
+      title: "async tic-tac-toe ",
+      description: "This is a real-time multiplayer tic-tac-toe game. You can invite your friends to play together online.",
+      github: "https://github.com/iamsmruti/tic-tac-toe",
+      url: "https://crossedcircle.vercel.app/",
+      category: "web",
+      tech: ["Reactjs","Material UI","MongoDB","Nodejs","Expressjs","Redux Toolkit"]
+    },
+    {
+      id: "1",
+      created_at: "2022-10-20 14:55:52+00",
+      title: "Seeker's Saga",
+      description: "A Full Stack Treasure Hunt Website, featured with interactive maps and puzzles to test your softskills.",
+      github: "https://github.com/iamsmruti/seekers_saga",
+      url: "https://seekers-saga.vercel.app/",
+      category: "web",
+      tech: ["React","NodeJS","MongoDB","Express","Material UI","Tailwind CSS","JWT"]
+    },
+    {
+      id: "3",
+      created_at: "2022-10-20 16:20:25.866641+00",
+      title: "Portfolio",
+      description: "My Personal Portfolio. Designed and Developed by myself. It is also featured with Blogs.",
+      github: "https://github.com/iamsmruti/portfolio",
+      url: "https://smruti.vercel.app/",
+      category: "web",
+      tech: ["Next","Supabase","Material UI","Tailwind CSS","Nodejs","Mongo DB"]
+    },
+    {
+      id: "6",
+      created_at: "2023-05-19 12:17:42.12918+00",
+      title: "Bottom Street",
+      description: "A Beautiful Sass Landing Page, featured with responsive layouts and slick carousels.",
+      github: "https://github.com/iamsmruti/bottomstreet",
+      url: "https://bottomstreet.vercel.app/",
+      category: "web",
+      tech: ["Next JS","Tailwind CSS","Google Analytics","SEO"]
+    }
+  ]
 
   return (
     <div className='min-h-[90vh]'>
