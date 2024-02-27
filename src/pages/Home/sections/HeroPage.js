@@ -8,7 +8,7 @@ const HeroPage = () => {
         <HelloText />
       </div>
       <div>
-        <p className="text-3xl bg-white text-black px-10 py-5 font-slab">
+        <p className="text-3xl bg-white border-black border-[0.5px] text-black px-10 py-5 font-slab">
           I'm Smruti Ranjan Badatya
         </p>
       </div>

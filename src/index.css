@@ -18,6 +18,11 @@ body {
   color: #fffbfc;
 }
 
+/* body {
+  color: #010400;
+  background-color: #fffbfc;
+} */
+
 .hello-dark {
   color: #fff;
   position: absolute;

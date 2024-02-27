@@ -11,7 +11,7 @@ const AboutPage = () => {
             className="w-[450px] z-[-1] absolute top-[10%] left-[50px]"
             src={profileImage}
           />
-          <p className="vertical-text h-fit py-10 z-10 bg-white text-black font-slab text-[50px]">
+          <p className="vertical-text border-black border-[0.5px] h-fit py-10 z-10 bg-white text-black font-slab text-[50px]">
             KNOW ME
           </p>
 
