@@ -10,6 +10,10 @@ module.exports = {
         blue: "#62BBC1",
         pink: "#EC058E",
       },
+      fontFamily: {
+        slab: ['"Josefin Slab"', "serif"],
+        sand: ['"Quicksand"', "serif"]
+      }
     },
   },
   plugins: [],
