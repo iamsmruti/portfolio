@@ -15,7 +15,7 @@ const ProjectsPage = () => {
           <HeadingLarge title="Projects" />
 
           <div>
-            <div className="flex mb-2 mt-5 border-b-[1px] dark:border-gray-800">
+            <div className="flex mb-2 border-b-[1px] dark:border-gray-800">
               {categories.map((category) => {
                 if (category.slug === value) {
                   return (

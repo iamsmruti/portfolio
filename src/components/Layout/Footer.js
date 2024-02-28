@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="border-t-[0.5px] border-gray-500">
       <Container>
         <div>
-          <p className="py-5 text-right">Designed & Developed with 💜 by <span className="text-blue">Smruti</span></p>
+          <p className="py-5 text-right">Made with 💜 by <span className="text-blue">Smruti</span></p>
         </div>
       </Container>
     </div>
