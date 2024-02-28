@@ -8,7 +8,7 @@ import HeadingLarge from "../../../components/CustomUI/HeadingLarge";
 
 const ExperiencePage = () => {
   return (
-    <div className="min-h-[100vh] py-10">
+    <div className="min-h-[100vh] py-10 mb-10">
       <Container>
         <HeadingLarge title={"Experiences"} />
         <div className="flex flex-wrap md:justify-start justify-center mt-5">
