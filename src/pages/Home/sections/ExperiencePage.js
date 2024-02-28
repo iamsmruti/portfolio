@@ -4,14 +4,13 @@ import { experience } from "../../../data/Experience";
 import { BsLinkedin } from "react-icons/bs";
 import { HiBuildingOffice2 } from "react-icons/hi2";
 import { ImCalendar } from "react-icons/im";
+import HeadingLarge from "../../../components/CustomUI/HeadingLarge";
 
 const ExperiencePage = () => {
   return (
     <div className="min-h-[100vh] py-10">
       <Container>
-        <div>
-          <p className="text-[100px] font-slab">Experiences</p>
-        </div>
+        <HeadingLarge title={"Experiences"} />
         <div className="flex flex-wrap md:justify-start justify-center mt-5">
           {experience?.map((work, index) => (
             <ExperienceCard work={work} key={index} />
