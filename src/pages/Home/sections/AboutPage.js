@@ -12,7 +12,7 @@ const AboutPage = () => {
             src={profileImage}
           />
           <p className="vertical-text border-black border-[0.5px] h-fit py-10 z-10 bg-white text-black font-slab text-[50px]">
-            KNOW ME
+            KNOW MORE
           </p>
 
           <div className="w-[50%] min-h-[550px] flex flex-col justify-between">

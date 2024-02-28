@@ -7,7 +7,7 @@ import { ImCalendar } from "react-icons/im";
 
 const ExperiencePage = () => {
   return (
-    <div className="min-h-[100vh]">
+    <div className="min-h-[100vh] py-10">
       <Container>
         <div>
           <p className="text-[100px] font-slab">Experiences</p>
