@@ -54,7 +54,7 @@ const LifeCheckList = () => {
             </p>
           </div>
 
-          <div className="flex mb-5 border-b-[1px] dark:border-gray-800">
+          <div className="flex mb-5 w-[100%] overflow-scroll border-b-[1px] dark:border-gray-800">
             {categories.map((category) => {
               if (category.slug === value) {
                 return (

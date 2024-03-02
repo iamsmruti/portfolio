@@ -3,7 +3,7 @@ import HelloText from "../../../components/HelloText";
 
 const HeroPage = () => {
   return (
-    <div className="relative h-[60vh] md:h-[70vh] lg:h-[calc(100vh)] flex flex-col justify-center items-center">
+    <div className="relative h-[80vh] md:h-[70vh] lg:h-[calc(100vh)] flex flex-col justify-center items-center">
       <div className="lg:text-[250px] md:text-[220px] sm:text-[170px] text-[150px] mt-[100px]">
         <HelloText />
       </div>
