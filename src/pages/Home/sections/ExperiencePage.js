@@ -8,10 +8,10 @@ import HeadingLarge from "../../../components/CustomUI/HeadingLarge";
 
 const ExperiencePage = () => {
   return (
-    <div className="min-h-[100vh] py-10 mb-10">
+    <div className="lg:min-h-[100vh] h-auto md:mt-0 mt-[40px] py-10 mb-10">
       <Container>
         <HeadingLarge title={"Experiences"} />
-        <div className="flex flex-wrap md:justify-start justify-center mt-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 md:justify-start justify-center mt-5">
           {experience?.map((work, index) => (
             <ExperienceCard work={work} key={index} />
           ))}
@@ -25,7 +25,7 @@ export default ExperiencePage;
 
 export const ExperienceCard = ({ work }) => {
   return (
-    <div className="w-[240px] bg-blackOlive md:w-[300px] md:mr-3 mb-3 p-3 shadow-md dark:border-[1px] border-gray-800">
+    <div className="w-[100%] bg-blackOlive  md:mr-3 p-3 shadow-md dark:border-[1px] border-gray-800">
       <div className="flex justify-between items-center">
         <div>
           <p className="text-sm">{work.subPosition}</p>
@@ -47,7 +47,7 @@ export const ExperienceCard = ({ work }) => {
       <ImCalendar className="ml-0.5 mr-3 rounded-none" /> {work.startDate} - {work.endDate}
       </p>
 
-      <p className="text-[16px] opacity-90 mt-4">{work.shortDescription}</p>
+      <p className="text-[16px] opacity-90 sm:h-[70px] mt-4">{work.shortDescription}</p>
       <p className="opacity-90 mt-4">
         <span className="text-blue">Tech Used: </span>
         {work.techUsed.map((item) => (

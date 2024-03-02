@@ -7,7 +7,7 @@ import { categories } from "../../../data/SkillCategories";
 const SkillsPage = () => {
   const [value, setValue] = useState('all')
   return (
-    <div className="min-h-[100vh] mb-20">
+    <div className="lg:min-h-[100vh] mb-20">
       <Container>
         <div>
           <HeadingLarge title="Skills" />
@@ -60,7 +60,7 @@ export default SkillsPage;
 
 export const SkillCard = ({ skill }) => {
   return (
-    <div className="shadow-md m-2 mx-1 dark:border-[1px] dark:border-gray-900">
+    <div className="shadow-md m-2 mx-1 dark:border-[1px] bg-blackOlive dark:border-gray-900">
       <div className="m-1 p-2 flex flex-col">
         <div className="flex justify-between items-center" direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
           <p style={{ fontWeight: 500, fontSize: '20px' }}>{skill.title}</p>

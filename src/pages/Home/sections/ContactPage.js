@@ -43,7 +43,7 @@ const ContactPage = () => {
   return (
     <div>
       <Container>
-        <form ref={formRef} className="h-[100vh]">
+        <form ref={formRef} className="lg:h-[90vh] md:h-[60vh] h-[70vh] sm:h-[50vh]">
           <HeadingLarge title="Contact Me" />
 
           <div className="max-w-[700px] w-[100%] mb-10">

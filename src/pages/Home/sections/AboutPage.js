@@ -4,20 +4,22 @@ import profileImage from "../../../assets/IMG_0393_Original.jpg";
 import { socialLinks } from '../../../data/SocialLinks'
 const AboutPage = () => {
   return (
-    <div className="h-[100vh]">
+    <div className="lg:h-[100vh] md:h-[60vh] h-auto">
       <Container>
-        <div className="relative flex justify-between w-[100%]">
+        <div className="relative grid md:grid-cols-2 sm:grid-cols-1 w-[100%]">
+          <div className="relative">
           <img
-            className="w-[450px] z-[-1] absolute top-[10%] left-[50px]"
+            className="lg:w-[450px] md:w-[85%] w-[80%] z-[-1] absolute top-[10%] left-[50px]"
             src={profileImage}
           />
-          <p className="vertical-text border-black border-[0.5px] h-fit py-10 z-10 bg-white text-black font-slab text-[50px]">
+          <p className="vertical-text ml-4 sm:ml-2 md:ml-0 border-black border-[0.5px] h-fit py-10 z-10 bg-white text-black font-slab lg:text-[50px] md:text-[42px] text-[35px] sm:text-[40px]">
             KNOW MORE
           </p>
+          </div>
 
-          <div className="w-[50%] min-h-[550px] flex flex-col justify-between">
-            <div className="pl-10 pt-10">
-              <p className="font-bold font-slab text-[50px]">Namaste 🙏</p>
+          <div className="md:min-h-[550px] sm:mt-[250px] mt-[50px] md:mt-0 flex flex-col justify-between">
+            <div className="md:pl-10 pt-10">
+              <p className="font-bold font-slab lg:text-[50px] md:text-[45px] text-[50px]">Namaste 🙏</p>
 
               <div className="border-[0.5px] border-gray-600 p-5 bg-blackOlive text-lg">
                 <p>I am a Full Stack Developer from India. I build and manage websites.</p>
@@ -29,8 +31,8 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="pl-10 pt-10 mt-auto">
-              <p className="font-bold font-slab text-[50px]">Let's Connect</p>
+            <div className="md:pl-10 mt-[50px] md:mt-10 lg:pt-10 md:pt-5 ">
+              <p className="font-bold font-slab lg:text-[50px] md:text-[45px] text-[50px]">Let's Connect</p>
 
               <div className="bg-blackOlive p-5">
                 <div className="flex">

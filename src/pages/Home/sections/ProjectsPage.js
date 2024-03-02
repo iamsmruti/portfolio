@@ -9,7 +9,7 @@ const ProjectsPage = () => {
   const [value, setValue] = useState("featured");
 
   return (
-    <div className="min-h-[80vh] mb-20">
+    <div className="ld:min-h-[80vh] h-auto mb-20">
       <Container>
         <div>
           <HeadingLarge title="Projects" />
@@ -39,7 +39,7 @@ const ProjectsPage = () => {
               })}
             </div>
 
-            <div className="flex flex-wrap md:justify-start justify-center mt-5">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 mt-5">
               {projects
                 ?.filter((item) => {
                   if (value === "featured") return item.featured === true;
@@ -61,7 +61,7 @@ export default ProjectsPage;
 
 export const ProjectCard = ({ project }) => {
   return (
-    <div className="w-[240px] bg-blackOlive md:w-[300px] md:mr-3 mb-3 p-3 shadow-md dark:border-[1px] border-gray-800">
+    <div className="bg-blackOlive w-[100%] md:mr-3 p-3 shadow-md dark:border-[1px] border-gray-800">
       <div className="flex justify-between items-center">
         <p className="font-bold text-[20px]">{project.name}</p>
       </div>
@@ -90,7 +90,7 @@ export const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      <p className="text-[16px] opacity-90 mt-4">{project.description}</p>
+      <p className="text-[16px] opacity-90 sm:h-[90px] mt-4">{project.description}</p>
 
       <p className="opacity-90 mt-6">
         <span className="text-blue">Tech Used: </span>
