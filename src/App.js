@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
+import Home from "./pages/Portfolio";
 import Blog from "./pages/Blog";
 import Layout from "./components/Layout";
 import Loading from "./pages/Loading";
+import LifeCheckList from "./pages/LifeCheckList";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -24,6 +25,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/wishlist" element={<LifeCheckList />} />
           </Routes>
         </Layout>
       )}
