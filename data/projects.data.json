@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "agilecoder.in",
+    "description": "This is a Tech Blog with Content Management created using ghost CMS. It's featured with Google Analytics, Search Console and Adsense. It is being deployed using AWS lightsail, and uses S3 for the assets.",
+    "url": "https://agilecoder.in",
+    "github": "",
+    "category": "general",
+    "tech": [
+      "Ghost CMS",
+      "Lightsail",
+      "S3",
+      "Google Analytics",
+      "Search Console",
+      "Adsense"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "agilecoder.in",
+    "description": "This is a Tech Blog with Content Management created using ghost CMS. It's featured with Google Analytics, Search Console and Adsense. It is being deployed using AWS lightsail, and uses S3 for the assets.",
+    "url": "https://agilecoder.in",
+    "github": "",
+    "category": "web",
+    "tech": [
+      "Ghost CMS",
+      "Lightsail",
+      "S3",
+      "Google Analytics",
+      "Search Console",
+      "Adsense"
+    ]
+  }
+]

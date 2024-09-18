@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "designation": "Full Stack Developer",
+    "company": "eLitmus Evaluation",
+    "location": "Bangalore",
+    "start_date": "July 2024",
+    "end_date": "Present",
+    "description": "Leading an early project's frontend. Manages feature requests and delivery in time.",
+    "tech": [
+      "React",
+      "PhaserJS",
+      "MobX",
+      "TailwindCSS"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 2,
+    "designation": "Full Time Intern",
+    "company": "eLitmus Evaluation",
+    "location": "Bangalore",
+    "start_date": "Jan 2024",
+    "end_date": "June 2024",
+    "description": "Building the frontend of an internal product that focuses on improving people's attention span",
+    "tech": [
+      "React",
+      "PhaserJS",
+      "MobX",
+      "TailwindCSS"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 3,
+    "designation": "Technical Consultant",
+    "company": "eLitmus Evaluation",
+    "location": "Bangalore",
+    "start_date": "Oct 2023",
+    "end_date": "Dec 2023",
+    "description": "Building the frontend of an internal product that focuses on improving people's attention span",
+    "tech": [
+      "React",
+      "PhaserJS",
+      "MobX",
+      "TailwindCSS"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 4,
+    "designation": "React/Redux Developer",
+    "company": "RIP Tech",
+    "location": "Remote",
+    "start_date": "August 2024",
+    "end_date": "September 2024",
+    "description": "Building the frontend of an internal product that focuses on improving people's attention span",
+    "tech": [
+      "React",
+      "PhaserJS",
+      "MobX",
+      "TailwindCSS"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 5,
+    "designation": "Summer Intern",
+    "company": "eLitmus Evaluation",
+    "location": "Remote",
+    "start_date": "May 2023",
+    "end_date": "July 2023",
+    "description": "Building the frontend of an internal product that focuses on improving people's attention span",
+    "tech": [
+      "React",
+      "PhaserJS",
+      "MobX",
+      "TailwindCSS"
+    ],
+    "linkedin": ""
+  },
+  {
+    "id": 6,
+    "designation": "Summer Intern",
+    "company": "eLitmus Evaluation",
+    "location": "Remote",
+    "start_date": "May 2023",
+    "end_date": "July 2023",
+    "description": "Building the frontend of an internal product that focuses on improving people's attention span",
+    "tech": [
+      "React",
+      "PhaserJS",
+      "MobX",
+      "TailwindCSS"
+    ],
+    "linkedin": ""
+  }
+]

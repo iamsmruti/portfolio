@@ -4,7 +4,6 @@ import React, { useState } from 'react'
 import Heading from '../Heading'
 
 import { customInput, customTextArea } from '../../assets/Styles';
-import { supabase } from '../../supabaseConfig';
 
 const Contact = () => {
   const [name, setName] = useState('')
@@ -12,12 +11,6 @@ const Contact = () => {
   const [message, setMessage] = useState('')
 
   const fetchData = async (name, email, message) => {
-    const { data, error } = await supabase
-      .from('contact')
-      .insert([
-        { name, email, message }
-      ])
-
     alert('Your Message has been sent !')
   }
   const handleSubmit = (e) => {

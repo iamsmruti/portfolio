@@ -9,14 +9,14 @@ import Works from '../components/Sections/Works'
 import Contact from '../components/Sections/Contact'
 import Footer from '../components/Sections/Footer'
 import ScrollProgress from '../components/atoms/ScrollProgress'
+import config from '../site.config.json' assert { type: 'json' };
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="Portfolio of Smruti Ranjan Badatya" />
-        <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/portfolio-208ef.appspot.com/o/S.png?alt=media&token=a83e253c-5c7e-4916-9bda-56ca21f7270f" />
+        <title>{config.name}</title>
+        <meta name="description" content={config.description} />
       </Head>
 
       <ScrollProgress />
@@ -27,7 +27,8 @@ export default function Home() {
         <Works />
         <Experience />
         <Skills />
-        <Contact />
+        {/* 
+        <Contact /> */}
       </Container>
       <Footer />
     </div>

@@ -1,28 +1,14 @@
 import { Box, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
-import React, { useEffect, useState} from 'react'
+import React, { useState } from 'react'
 import Heading from '../Heading'
 
 import { glassMorphism, active, notActive } from '../../assets/Styles'
-import { supabase } from '../../supabaseConfig'
 import GitHubIcon from '@mui/icons-material/GitHub';
-
+import works from "../../data/projects.data.json" assert {type: 'json'};
 
 const Works = () => {
   const [value, setValue] = useState(0)
-  const [works, setWork] = useState([])
-
-  const getData = async () => {
-    const { data, error } = await supabase
-      .from('works')
-      .select('*')
-    setWork(data)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
-
   return (
     <Box sx={{ minHeight: 'calc(100vh - 60px)', height: 'auto',mt: 10 }}>
       <Heading title={'WORKS'} />
@@ -39,7 +25,7 @@ const Works = () => {
           else if (value === 2) return item.category === 'general'
           else return item
         }).map((work, index) => (
-          <Box key={index} sx={{ width: { xs: '280px', md: '350px' }, m: 1, p: 2 }} style={glassMorphism}>
+          <Box key={index} sx={{ width: { xs: '280px', md: '320px' }, m: 1, p: 2 }} style={glassMorphism}>
             <Stack direction={'row'} justifyContent={'space-between'} alignItems={'center'}>
               <Typography sx={{ fontWeight: 500, fontSize: '20px' }}>{work.title}</Typography>
 

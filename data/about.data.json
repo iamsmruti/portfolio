@@ -1,0 +1,57 @@
+{
+  "self": {
+    "bio_para1": "My Name is Smruti Ranjan Badatya. I am a Full Stack Web Developer from India.",
+    "bio_para2": "I build and manage websites and I do it with creativity and passion. I also love to learn new things and to share what I've learned with others.",
+    "age": "22",
+    "freelance": "Available",
+    "address": "Bengaluru, Karnataka",
+    "nationality": "Indian",
+    "phone": "+91 789 471 8923",
+    "email": "smruti.ranjan@outlook.in",
+    "social": {
+      "github": {
+        "url": "https://github.com/iamsmruti",
+        "icon": "github"
+      },
+      "gitlab": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "gitlab"
+      },
+      "medium": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "medium"
+      },
+      "instagram": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "instagram"
+      },
+      "tech_blog": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "wordpress"
+      },
+      "twitter": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "twitter"
+      },
+      "linkedin": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "linkedin"
+      },
+      "leetcode": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "leetcode"
+      },
+      "youtube": {
+        "url": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+        "icon": "youtube"
+      }
+    }
+  },
+  "education": {
+    "bio": "I am currently pursuing my Bachelor's in Veer Surendra Sai University of Technology, Burla, Sambalpur, Odisha.",
+    "major": "Computer Science and Engineering",
+    "cgpa": "8.69",
+    "graduation_year": "2024",
+    "quote": "College gave me ample of experiences and friends that will be preserved for the rest of my life"
+  }
+}

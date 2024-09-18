@@ -1,0 +1,62 @@
+[
+  {
+    "tech": "React/Next",
+    "description": "Used React/Next extensively for all my projects",
+    "type": "frontend"
+  },
+  {
+    "tech": "Typescript",
+    "description": "I prefer typescript whenever it is necessary",
+    "type": "frontend"
+  },
+  {
+    "tech": "CSS",
+    "description": "I prefer using TailwindCSS, but it's with SASS, or even vanilla as well.",
+    "type": "frontend"
+  },
+  {
+    "tech": "Component Library",
+    "description": "Fine with Bootstrap, Material UI, Shad CN, or whatever",
+    "type": "frontend"
+  },
+  {
+    "tech": "State Management",
+    "description": "Have worked with Redux Toolkit, Zustand, MobX, Tanstack Query",
+    "type": "frontend"
+  },
+  {
+    "tech": "Testing",
+    "description": "I use Jest and Cypress for testing React Application",
+    "type": "frontend"
+  },
+  {
+    "tech": "Git",
+    "description": "I use Git for version control and collaboration",
+    "type": "tools"
+  },
+  {
+    "tech": "Docker",
+    "description": "Good with docker based development and deployment.",
+    "type": "tools"
+  },
+  {
+    "tech": "AWS",
+    "description": "Haved worked with EC2, Lightsail, S3, and few more services.",
+    "type": "tools"
+  },
+  {
+    "tech": "SEO",
+    "description": "Haved worked with Google Search Console, Analytics and Adsense.",
+    "type": "tools"
+  },
+  {
+    "tech": "NodeJS + Express",
+    "description": "Good with making robust web servers with Authentication & Authorisation.",
+    "type": "backend"
+  },
+  {
+    "tech": "Database",
+    "description": "I have worked with MongoDB, MySQL, and PostgreSQL",
+    "type": "backend"
+  }
+]

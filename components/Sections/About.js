@@ -1,28 +1,16 @@
 import { Box, Grid, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Heading from '../Heading'
 
 import { glassMorphism, active, notActive } from '../../assets/Styles'
-import { supabase } from '../../supabaseConfig'
+
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import about from "../../data/about.data.json" assert { type: 'json' };
 
 const About = () => {
   const [value, setValue] = useState(0)
-  const [about, setAbout] = useState([])
-
-  const getData = async () => {
-    const { data, error } = await supabase
-      .from('about')
-      .select('*')
-
-    setAbout(data)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
 
   return (
     <Box sx={{ height: { md: 'auto', xs: 'auto', mt: 5 } }}>
@@ -46,74 +34,69 @@ const About = () => {
             </Stack>
 
             {value === 0 && <Box style={glassMorphism} sx={{ height: 'auto', p: 2 }}>
-              {about?.map((item, index) => (
-                <Box key={index}>
-                  <Typography sx={{ fontSize: '16px', color: 'lightgray' }}>{item.para1}</Typography>
+              <Box>
+                <Typography sx={{ fontSize: '16px', color: 'lightgray' }}>{about.self.bio_para1}</Typography>
 
-                  <Typography sx={{ fontSize: '16px', mt: 2, color: 'lightgray' }}>{item.para2}</Typography>
+                <Typography sx={{ fontSize: '16px', mt: 2, color: 'lightgray' }}>{about.self.bio_para2}</Typography>
 
-                  <Grid sx={{ mt: 6 }} container>
-                    <Grid item md={6} xs={12}>
-                      <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Age: </span>. . . {item.age}</Typography>
-                      <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Freelance: </span>. . . {item.freelance}</Typography>
-                      <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Phone: </span>. . . {item.phone}</Typography>
-                    </Grid>
-
-                    <Grid item md={6} xs={12}>
-                      <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Nationality: </span>. . . {item.nationality}</Typography>
-                      <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Address: </span>. . . {item.address}</Typography>
-                    </Grid>
-
-                    <Grid item md={12} xs={12}>
-                      <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Address: </span>. . . {item.email}</Typography>
-                    </Grid>
-
-                    <Grid item md={12} xs={12}>
-                      <Stack sx={{ mt: 4 }} direction={'row'}>
-                        <a href={item.github} target={'_blank'} rel={'noreferrer'}>
-                          <GitHubIcon sx={{fontSize: '30px', mt: -0.5, mr: 2.5, color: 'white'}}/>
-                        </a>
-
-                        <a href={item.twitter} target={'_blank'} rel={'noreferrer'}>
-                          <img style={{ width: '25px', marginRight: '1.5rem', marginTop: '3px' }} src={'https://pngimg.com/uploads/twitter/twitter_PNG15.png'} />
-                        </a>
-
-                        <a style={{color: 'white'}} href={item.linkedin} target={'_blank'} rel={'noreferrer'}>
-                          <LinkedInIcon sx={{fontSize: '30px', mt: -0.5, mr: 2.5, color: 'white'}}/>
-                        </a>
-
-                        <a href={item.instagram} target={'_blank'} rel={'noreferrer'}>
-                          <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://i.pinimg.com/originals/64/c7/c8/64c7c86fd70cb2aea77b49fd340164b3.webp'} />
-                        </a>
-
-                        <a href={item.medium} target={'_blank'} rel={'noreferrer'}>
-                          <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://cdn-icons-png.flaticon.com/512/5968/5968906.png'} />
-                        </a>
-
-                        <a href={item.leetcode} target={'_blank'} rel={'noreferrer'}>
-                          <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://leetcode.com/static/images/LeetCode_logo_rvs.png'} />
-                        </a>
-                      </Stack>
-                    </Grid>
+                <Grid sx={{ mt: 6 }} container>
+                  <Grid item md={6} xs={12}>
+                    <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Age: </span>. . . {about.self.age}</Typography>
+                    <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Freelance: </span>. . . {about.self.freelance}</Typography>
+                    <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Phone: </span>. . . {about.self.phone}</Typography>
                   </Grid>
-                </Box>
-              ))}
+
+                  <Grid item md={6} xs={12}>
+                    <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Nationality: </span>. . . {about.self.nationality}</Typography>
+                    <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Address: </span>. . . {about.self.address}</Typography>
+                  </Grid>
+
+                  <Grid item md={12} xs={12}>
+                    <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Email: </span>. . . {about.self.email}</Typography>
+                  </Grid>
+
+                  <Grid item md={12} xs={12}>
+                    <Stack sx={{ mt: 4 }} direction={'row'}>
+                      <a href={about.self.social.github.url} target={'_blank'} rel={'noreferrer'}>
+                        <GitHubIcon sx={{fontSize: '30px', mt: -0.5, mr: 2.5, color: 'white'}}/>
+                      </a>
+
+                      <a href={about.self.social.twitter.url} target={'_blank'} rel={'noreferrer'}>
+                        <img style={{ width: '25px', marginRight: '1.5rem', marginTop: '3px' }} src={'https://pngimg.com/uploads/twitter/twitter_PNG15.png'} />
+                      </a>
+
+                      <a style={{color: 'white'}} href={about.self.social.linkedin.url} target={'_blank'} rel={'noreferrer'}>
+                        <LinkedInIcon sx={{fontSize: '30px', mt: -0.5, mr: 2.5, color: 'white'}}/>
+                      </a>
+
+                      <a href={about.self.social.instagram.url} target={'_blank'} rel={'noreferrer'}>
+                        <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://i.pinimg.com/originals/64/c7/c8/64c7c86fd70cb2aea77b49fd340164b3.webp'} />
+                      </a>
+
+                      <a href={about.self.social.medium.url} target={'_blank'} rel={'noreferrer'}>
+                        <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://cdn-icons-png.flaticon.com/512/5968/5968906.png'} />
+                      </a>
+
+                      <a href={about.self.social.leetcode.url} target={'_blank'} rel={'noreferrer'}>
+                        <img style={{ width: '35px', marginRight: '1.5rem', marginTop: '-5px' }} src={'https://leetcode.com/static/images/LeetCode_logo_rvs.png'} />
+                      </a>
+                    </Stack>
+                  </Grid>
+                </Grid>
+              </Box>
             </Box>}
 
             {value === 1 && <Box style={glassMorphism} sx={{ height: 'auto', p: 2 }}>
-
-              {about?.map((item, index) => (
-                <>
-                  <Typography sx={{ fontSize: '16px', color: 'lightgray' }}>I am currently pursuing my Bachelor&apos;s in Veer Surendra Sai University of Technology, Burla, Sambalpur, Odisha.</Typography>
-                  <Grid key={index} sx={{ mt: 6 }} container>
-                    <Grid item md={12} xs={12}>
-                      <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Major: </span>. . . {item.branch}</Typography>
-                      <Typography sx={{ color: 'lightgray', mt: 1 }}><span style={{ color: 'lightblue' }}>Semester: </span>. . . 5th</Typography>
-                      <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>CGPA: </span>. . . {item.cgpa}</Typography>
-                    </Grid>
+              <>
+                <Typography sx={{ fontSize: '16px', color: 'lightgray' }}>{about.education.bio}</Typography>
+                <Grid sx={{ mt: 6 }} container>
+                  <Grid item md={12} xs={12}>
+                    <Typography sx={{ color: 'lightgray' }}><span style={{ color: 'lightblue' }}>Major: </span>. . . {about.education.major}</Typography>
+                    <Typography sx={{ color: 'lightgray', mt: 1 }}><span style={{ color: 'lightblue' }}>Graduation: </span>. . . {about.education.graduation_year}</Typography>
+                    <Typography sx={{ mt: 1, color: 'lightgray' }}><span style={{ color: 'lightblue' }}>CGPA: </span>. . . {about.education.cgpa} / 10</Typography>
                   </Grid>
-                </>
-              ))}
+                </Grid>
+              </>
             </Box>}
           </Box>
         </Grid>

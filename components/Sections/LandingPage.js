@@ -1,25 +1,9 @@
 import { Box, Typography } from '@mui/material'
 import { Stack } from '@mui/system'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Type from '../atoms/Typewriter'
-import { supabase } from '../../supabaseConfig'
 
 const LandingPage = () => {
-  const [about, setAbout] = useState([])
-
-  const getData = async () => {
-    const { data, error } = await supabase
-      .from('about')
-      .select('*')
-
-    setAbout(data)
-    console.log(data)
-  }
-
-  useEffect(() => {
-    getData()
-  }, [])
-
   return (
     <Box sx={{height: 'calc(100vh - 60px)', display: 'flex', alignContent: 'center', justifyContent: 'center', transform: 'translateY(90px)'}}>
         <Stack sx={{ml: -1.5, mt: 'auto', mb: 'auto'}}>
@@ -31,7 +15,7 @@ const LandingPage = () => {
                 <Type />
             </Stack>
 
-            <a rel="noreferrer" target={"_blank"} href={about[0]?.cv} download>
+            <a rel="noreferrer" target={"_blank"} href={"#"} download>
               <Stack direction={'row'} sx={{ m: 1, p: 2, border: '1px solid #1e1e1e', width: 'fit-content', ml: 'auto', mr: 'auto', bgcolor: 'black', cursor: 'pointer'}} justifyContent={'center'} alignContent={'center'}>
                   <Typography sx={{fontSize: 16, fontWeight: 200}}>My Resume</Typography>
               </Stack>
