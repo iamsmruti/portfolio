@@ -3,43 +3,16 @@ import ContactsSection from "@/components/Sections/Home/ContactsSection"
 import ExperienceSection from "@/components/Sections/Home/ExperienceSection"
 import HeroSection from '@/components/Sections/Home/HeroSection'
 import SkillsSection from "@/components/Sections/Home/SkillsSection"
-import Visitors from "@/components/Sections/Home/Visitors"
 import WorkSection from '@/components/Sections/Home/WorkSection'
 import Head from "next/head"
 import React from 'react'
-import { useState, useEffect } from "react"
-import { supabase } from '../../supabaseConfig'
+import { useEffect } from "react"
 import { Mixpanel } from "../../mixpanel"
 
 const Home = () => {
-  const [previousData, setData] = useState([])
-  const [logs, setLogs] = useState([])
-
-  const getData = async () => {
-    const { data, error } = await supabase
-      .from('about')
-      .select('*')
-    setData(data)
-  }
-
-  const updateData = async () => {
-    const { data, error } = await supabase
-      .from('about')
-      .update({ visitors : previousData[0]?.visitors + 1})
-      .eq('id', 1)
-  }
-
   useEffect(() => {
-    getData()
     Mixpanel.track('page', 'Portfolio')
   }, [])
-
-  useEffect(() => {
-    setTimeout(() => {
-      if(previousData !== [])
-        updateData()
-    }, 2000)
-  }, [previousData])
 
   return (
     <div className="relative">
