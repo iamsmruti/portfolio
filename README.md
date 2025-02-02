@@ -1,23 +1,23 @@
 
 ## Portfolio
 
-This is my Personal Portfolio, designed and developer by myself.
+Hey Everyone, Welcome to this Repo. I have tried to preserve my portfolio projects into one repo through different branches. I wanted to preserve all my works that I spent making portfolio websites for myself. I worked on this version of portfolio in th year 2022.
 
+![](/assets/smruti-2022.png)
 
-![App Screenshot](https://firebasestorage.googleapis.com/v0/b/portfolio-208ef.appspot.com/o/Screenshot%202022-10-22%20at%203.08.18%20AM.png?alt=media&token=55f8681f-080d-4249-ad29-566da966615d)
+You can see it live here: [(2002) Portfolio](https://smruti-2022.vercel.app/)
 
 ## Features
-This is a Full Stack Web Application. The Data shown here is dynamic and is being fetched from supabase.The App is fully mobile responsive as well.
+This is a Minimalistic Developer Portfolio, this can serve a great deal to the freshers. Here I had mentioned my work experience, education, skills, and projects.
 
 ## Tech Used
 - **NextJS** framework is used for the Web App.
 - **Material UI**, for the UI components
-- **Supabase**, for fetching the data.
+- **JSON**, for the data.
 - **Vercel**, for deployment
-- **Google Analytics**, for fun 😂
+- **Google Analytics**, for fun 😂 { have removed it }
 
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
