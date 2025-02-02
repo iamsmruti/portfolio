@@ -27,8 +27,7 @@ export default function Home() {
         <Works />
         <Experience />
         <Skills />
-        {/* 
-        <Contact /> */}
+        <Contact />
       </Container>
       <Footer />
     </div>

@@ -9,10 +9,10 @@ const LandingPage = () => {
         <Stack sx={{ml: -1.5, mt: 'auto', mb: 'auto'}}>
             <Typography className='hello' component={"span"}  sx={{fontSize: {md: 180, xs: 100}, fontWeight: 600, color: '#1e1e1e'}}>HELLO,</Typography>
             <Typography className='hello' component={"span"}  sx={{fontSize: {md: 180, xs: 100}, fontWeight: 600, color: '#1e1e1e'}}>HELLO,</Typography>
-            <Typography sx={{fontSize: {md: 60, xs: 32}, fontWeight: 500, mt: {md: -7, xs: -4}, ml: 1.5}}>I&apos;m Smruti Ranjan</Typography>
+            <Typography sx={{fontSize: {md: 60, xs: 32}, fontWeight: 500, mt: {md: 15, xs: -4}, ml: 1.5}}>I&apos;m Smruti Ranjan</Typography>
 
             <Stack direction={'row'} sx={{ m: 1, p: 2, fontSize: {md: 30, xs: 24}, fontWeight: 200}} justifyContent={'center'} alignContent={'center'}>
-                <Type />
+              <Type />
             </Stack>
 
             <a rel="noreferrer" target={"_blank"} href={"#"} download>
