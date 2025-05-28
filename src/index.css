@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+.markdown > * {
+  all: revert;
+}
+
+.markdown h1, h2, h3, h4 {
+  font-weight: 400 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.markdown > ol {
+  margin-top: 0.5rem;
+}
+
+.markdown > ul {
+  margin-top: 0.2rem;
+}
+
+.markdown li {
+  margin-top: 0.5rem;
+}
+
+.markdown > h4 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+.markdown > hr {
+  margin: 2rem 0;
+}
+
+.markdown > p {
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.markdown > b {
+  font-weight: 500;
+}
+
+.markdown a {
+  color: rgb(133, 192, 255);
+}
+
+.markdown a:hover{
+  text-decoration: underline;
+}
+
+.markdown > blockquote {
+  margin-left: 0px;
+  padding-left: 1rem;
+  border-left: 4px solid rgb(226, 139, 139);
+  color: rgb(133, 192, 255);
+}
+
